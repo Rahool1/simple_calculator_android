@@ -82,25 +82,25 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 			op2 = Integer.parseInt(disp.getText().toString());
 			disp.setText("");
 			op1 = op1 + op2;
-			disp.setText("Result : " + Integer.toString(op1));
+			disp.setText(Integer.toString(op1));
 		}
 		else if(optr.equals("-")){
 			op2 = Integer.parseInt(disp.getText().toString());
 			disp.setText("");
 			op1 = op1 - op2;
-			disp.setText("Result : " + Integer.toString(op1));
+			disp.setText(Integer.toString(op1));
 		}
 		else if(optr.equals("*")){
 			op2 = Integer.parseInt(disp.getText().toString());
 			disp.setText("");
 			op1 = op1 * op2;
-			disp.setText("Result : " + Integer.toString(op1));
+			disp.setText(Integer.toString(op1));
 		}
 		else if(optr.equals("/")){
 			op2 = Integer.parseInt(disp.getText().toString());
 			disp.setText("");
 			op1 = op1 / op2;
-			disp.setText("Result : " + Integer.toString(op1));
+			disp.setText(Integer.toString(op1));
 		}
 	}
 	@Override
@@ -112,7 +112,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op2 = 0;
 					disp.setText("");
 				}
-				str = str.append(two.getText());
+				str = str.append(one.getText());
 				disp.setText(str);
 			break;
 			case R.id.two:
@@ -160,7 +160,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op2 = 0;
 					disp.setText("");
 				}
-				str = str.append(eight.getText());
+				str = str.append(seven.getText());
 				disp.setText(str);
 			break;
 			case R.id.eight:
@@ -168,7 +168,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op2 = 0;
 					disp.setText("");
 				}
-				str = str.append(nine.getText());
+				str = str.append(eight.getText());
 				disp.setText(str);
 		
 			break;
@@ -177,15 +177,20 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op2 = 0;
 					disp.setText("");
 				}
-				str = str.append(zero.getText());
+				str = str.append(nine.getText());
 				disp.setText(str);
 		
 			break;
+			
+			case R.id.zero:
+				str = str.append(zero.getText());
+				disp.setText(str);
+				break;
 			case R.id.cancel:
 				op1 = 0;
 				op2 = 0;
 				disp.setText("");
-				disp.setHint("Perform Operation :)");
+//				disp.setHint("Perform Operation :)");
 		
 			break;
 			case R.id.add:
@@ -194,7 +199,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op1 = Integer.parseInt(disp.getText().toString());
 					disp.setText("");
 				}
-				else if(op2 != 0){
+				else if(op2 == 0){
 					op2 = 0;
 					disp.setText("");
 				}
@@ -202,7 +207,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op2 = Integer.parseInt(disp.getText().toString());
 					disp.setText("");
 					op1 = op1 + op2;
-					disp.setText("Result : " + Integer.toString(op1));
+					disp.setText(Integer.toString(op1));
 				}
 			break;
 			case R.id.sub:
@@ -219,7 +224,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op2 = Integer.parseInt(disp.getText().toString());
 					disp.setText("");
 					op1 = op1 - op2;
-					disp.setText("Result : " + Integer.toString(op1));
+					disp.setText(Integer.toString(op1));
 				}
 			break;
 			case R.id.mul:
@@ -236,7 +241,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op2 = Integer.parseInt(disp.getText().toString());
 					disp.setText("");
 					op1 = op1 * op2;
-					disp.setText("Result : " + Integer.toString(op1));
+					disp.setText(Integer.toString(op1));
 				}
 			break;
 			case R.id.div:
@@ -253,7 +258,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 					op2 = Integer.parseInt(disp.getText().toString());
 					disp.setText("");
 					op1 = op1 / op2;
-					disp.setText("Result : " + Integer.toString(op1));
+					disp.setText(Integer.toString(op1));
 				}
 			break;
 			case R.id.equal:
@@ -262,22 +267,22 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 						if(optr.equals("+")){
 							disp.setText("");
 							/*op1 = op1 + op2;*/
-							disp.setText("Result : " + Integer.toString(op1));
+							disp.setText(Integer.toString(op1));
 						}
 						else if(optr.equals("-")){
 							disp.setText("");/*
 							op1 = op1 - op2;*/
-							disp.setText("Result : " + Integer.toString(op1));
+							disp.setText(Integer.toString(op1));
 						}
 						else if(optr.equals("*")){
 							disp.setText("");/*
 							op1 = op1 * op2;*/
-							disp.setText("Result : " + Integer.toString(op1));
+							disp.setText(Integer.toString(op1));
 						}
 						else if(optr.equals("/")){
 							disp.setText("");/*
 							op1 = op1 / op2;*/
-							disp.setText("Result : " + Integer.toString(op1));
+							disp.setText(Integer.toString(op1));
 						}
 					}
 					else{
